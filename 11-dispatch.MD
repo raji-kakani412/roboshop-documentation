@@ -53,7 +53,7 @@ vim /etc/systemd/system/dispatch.service
 Description = Dispatch Service
 [Service]
 User=roboshop
-Environment=AMQP_HOST=RABBITMQ-IP
+Environment=AMQP_HOST=rabbitmq.devops-aws.tech
 Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=roboshop123
 ExecStart=/app/dispatch

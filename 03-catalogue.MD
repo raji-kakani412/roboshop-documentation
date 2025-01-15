@@ -78,7 +78,7 @@ Description = Catalogue Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=MONGO_URL="mongodb://<MONGODB-SERVER-IPADDRESS>:27017/catalogue"
+Environment=MONGO_URL="mongodb://mongodb.devops-aws.tech:27017/catalogue"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=catalogue
 
@@ -128,7 +128,7 @@ dnf install -y mongodb-mongosh
 Load Schema
 
 ```
-mongosh --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongosh --host mongodb.devops-aws.tech </app/schema/catalogue.js
 ```
 
 **NOTE: You need to update catalogue server ip address in frontend configuration. Configuration file is /etc/nginx/default.d/roboshop.conf**
